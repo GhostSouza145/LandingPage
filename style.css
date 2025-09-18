@@ -1,0 +1,270 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace; /* Fonte retrô/pixelada */
+    background-color: #0a0a0a; /* Fundo preto profundo */
+    color: #00ff00; /* Verde neon, clássico hacker */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tipografia Futurista/Retrô */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif; /* Fonte mais futurista para títulos */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+h1 {
+    font-size: 4em;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #00ff00;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffff00; /* Amarelo ao passar o mouse */
+    text-shadow: 0 0 8px #ffff00;
+}
+
+/* Seção Hero */
+#hero {
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn-access {
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+.btn-access:hover {
+    background-color: #00ff00;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* Efeito de texto caindo (simulado com divs e animação) */
+.terminal-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.terminal-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0) 0%, rgba(0, 255, 0, 0.8) 100%);
+    pointer-events: none;
+}
+
+/* Seções Gerais */
+section {
+    padding: 60px 0;
+    border-bottom: 1px dashed #004d00;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* Grid de Serviços */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.servico-item {
+    background-color: rgba(0, 255, 0, 0.05);
+    padding: 25px;
+    border: 1px solid #00ff00;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.servico-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+/* Formulário de Contato */
+#contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+#contato input, 
+#contato textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato input:focus, 
+#contato textarea:focus {
+    border-color: #ffff00;
+    box-shadow: 0 0 10px #ffff00;
+}
+
+#contato textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #00ff00;
+    color: #0a0a0a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+.btn-submit:hover {
+    background-color: #ffff00;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+    color: #004d00;
+}
+
+/* Efeitos de animação */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.blink-text {
+    animation: blink 1s infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+}
